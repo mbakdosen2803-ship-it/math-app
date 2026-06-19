@@ -68,39 +68,74 @@ elif menu == "2. Simulator Keseimbangan Pasar":
 
 # ==================== MENU 3: KUIS ====================
 elif menu == "3. Kuis Numerasi Interaktif":
-    st.title("📝 Kuis Evaluasi Mandiri")
-    st.write("Silakan jawab pertanyaan di bawah ini dengan teliti!")
+    st.title("📝 Kuis Asesmen Numerasi Fungsional")
+    st.write("Silakan jawab 10 pertanyaan di bawah ini secara mandiri!")
     
-    # ------------------ SOAL 1 ------------------
+    # Soal 1
     st.markdown("---")
     q1 = st.radio("1. Jika fungsi permintaan masker adalah Qd = 50 - 2P. Jika harga masker (P) adalah 10, berapakah jumlah yang diminta?", ["20", "30", "40", "50"], key="soal1")
     if st.button("Cek Jawaban Soal 1"):
-        if q1 == "30":
-            st.success("Benar! ✨ Pembahasan: Qd = 50 - 2(10) = 50 - 20 = 30.")
-        else:
-            st.error("Salah. ❌ Coba hitung kembali menggunakan rumus Qd.")
+        if q1 == "30": st.success("Benar! ✨ Pembahasan: Qd = 50 - 2(10) = 30.")
+        else: st.error("Salah. ❌ Periksa kembali perhitungan perkaliannya.")
 
-    # ------------------ SOAL 2 ------------------
+    # Soal 2
     st.markdown("---")
-    q2 = st.radio("2. Jika fungsi penawaran suatu barang adalah Qs = -20 + 3P. Jika harga barang (P) di pasar adalah 20, berapakah kuantitas yang ditawarkan oleh penjual?", ["20", "30", "40", "50"], key="soal2")
+    q2 = st.radio("2. Jika fungsi penawaran kemeja adalah Qs = -20 + 3P. Jika harga kemeja (P) adalah 20, berapakah kuantitas yang ditawarkan?", ["20", "30", "40", "50"], key="soal2")
     if st.button("Cek Jawaban Soal 2"):
-        if q2 == "40":
-            st.success("Benar! ✨ Pembahasan: Qs = -20 + 3(20) = -20 + 60 = 40.")
-        else:
-            st.error("Salah. ❌ Coba hitung kembali menggunakan rumus Qs.")
+        if q2 == "40": st.success("Benar! ✨ Pembahasan: Qs = -20 + 3(20) = 40.")
+        else: st.error("Salah. ❌ Ingat bahwa konstanta bernilai negatif.")
 
-    # ------------------ SOAL 3 ------------------
+    # Soal 3
     st.markdown("---")
-    q3 = st.radio("3. Diketahui fungsi permintaan Qd = 100 - 2P dan fungsi penawaran Qs = -20 + 4P. Berapakah harga keseimbangan (P) yang terjadi di pasar?", ["P = 10", "P = 20", "P = 30", "P = 40"], key="soal3")
+    q3 = st.radio("3. Diketahui fungsi permintaan Qd = 100 - 2P dan penawaran Qs = -20 + 4P. Berapakah harga (P) keseimbangan pasarnya?", ["10", "20", "30", "40"], key="soal3")
     if st.button("Cek Jawaban Soal 3"):
-        if q3 == "P = 20":
-            st.success("Benar! ✨ Pembahasan: Keseimbangan terjadi saat Qd = Qs. Maka 100 - 2P = -20 + 4P -> 120 = 6P -> P = 20.")
-        else:
-            st.error("Salah. ❌ Petunjuk: Cari titik ekuilibrium dengan rumus Qd = Qs.")
+        if q3 == "20": st.success("Benar! ✨ Pembahasan: Qd = Qs -> 100 - 2P = -20 + 4P -> 120 = 6P -> P = 20.")
+        else: st.error("Salah. ❌ Cari nilai P saat Qd sama dengan Qs.")
 
-# ==================== MENU 4: PROFIL ====================
-elif menu == "4. Profil Pengembang":
-    st.title("👤 Profil Pengembang")
-    st.write("**Nama:** Marchinia Rakhmi Pradani Putri")
-    st.write("**Program Studi:** Magister Pendidikan Matematika")
-    st.write("**Mata Kuliah:** Teknologi Pembelajaran Digital")
+    # Soal 4
+    st.markdown("---")
+    q4 = st.radio("4. Berdasarkan Soal 3, berapakah jumlah kuantitas (Q) keseimbangan pasar yang terjadi?", ["40", "50", "60", "70"], key="soal4")
+    if st.button("Cek Jawaban Soal 4"):
+        if q4 == "60": st.success("Benar! ✨ Pembahasan: Masukkan P = 20 ke rumus Qd. Qd = 100 - 2(20) = 60.")
+        else: st.error("Salah. ❌ Substitusikan nilai P keseimbangan ke salah satu fungsi.")
+
+    # Soal 5
+    st.markdown("---")
+    q5 = st.radio("5. Jika harga suatu barang naik, maka jumlah barang yang ditawarkan oleh produsen cenderung akan...", ["Turun", "Tetap", "Naik", "Tidak menentu"], key="soal5")
+    if st.button("Cek Jawaban Soal 5"):
+        if q5 == "Naik": st.success("Benar! ✨ Sesuai dengan Hukum Penawaran, harga sebanding dengan jumlah penawaran.")
+        else: st.error("Salah. ❌ Ingat kembali perilaku produsen saat harga pasar naik.")
+
+    # Soal 6
+    st.markdown("---")
+    q6 = st.radio("6. Fungsi permintaan barang dinyatakan dengan P = 80 - 4Q. Jika jumlah barang yang diminta (Q) adalah 5, berapakah harganya (P)?", ["50", "60", "70", "80"], key="soal6")
+    if st.button("Cek Jawaban Soal 6"):
+        if q6 == "60": st.success("Benar! ✨ Pembahasan: P = 80 - 4(5) = 80 - 20 = 60.")
+        else: st.error("Salah. ❌ Kurangi konstanta dengan hasil perkaliannya.")
+
+    # Soal 7
+    st.markdown("---")
+    q7 = st.radio("7. Jika suatu produk diberikan subsidi oleh pemerintah, pengaruh yang terjadi pada kurva penawaran adalah...", ["Kurva bergeser ke kiri bawah", "Kurva bergeser ke kanan bawah", "Kurva tetap", "Kurva menjadi vertikal"], key="soal7")
+    if st.button("Cek Jawaban Soal 7"):
+        if q7 == "Kurva bergeser ke kanan bawah": st.success("Benar! ✨ Subsidi menurunkan biaya produksi produsen, sehingga penawaran bertambah.")
+        else: st.error("Salah. ❌ Subsidi meringankan beban produsen, periksa arah pergeserannya.")
+
+    # Soal 8
+    st.markdown("---")
+    q8 = st.radio("8. Pada harga P = 50, jumlah permintaan barang adalah 10 unit. Ketika harga turun menjadi P = 40, jumlah permintaan naik menjadi 15 unit. Gradien (b) fungsi permintaan Qd = a - bP adalah...", ["0.5", "1.0", "1.5", "2.0"], key="soal8")
+    if st.button("Cek Jawaban Soal 8"):
+        if q8 == "0.5": st.success("Benar! ✨ Pembahasan: b = delta_Q / delta_P = (15 - 10) / (50 - 40) = 5 / 10 = 0.5.")
+        else: st.error("Salah. ❌ Rumus gradien kemiringan kuantitas terhadap harga adalah delta_Q dibagi delta_P.")
+
+    # Soal 9
+    st.markdown("---")
+    q9 = st.radio("9. Kondisi pasar di mana jumlah barang yang diminta konsumen lebih besar daripada jumlah yang ditawarkan produsen dinamakan...", ["Equilibrium", "Shortage (Kelangkaan)", "Surplus", "Monopoli"], key="soal9")
+    if st.button("Cek Jawaban Soal 9"):
+        if q9 == "Shortage (Kelangkaan)": st.success("Benar! ✨ Excess Demand atau kelebihan permintaan memicu kelangkaan barang di pasar.")
+        else: st.error("Salah. ❌ Jumlah permintaan lebih melimpah dibanding pasokan, sebutannya adalah kelangkaan.")
+
+    # Soal 10
+    st.markdown("---")
+    q10 = st.radio("10. Jika fungsi penawaran adalah Qs = 2P - 10, pada tingkat harga berapakah produsen mulai enggan menawarkan barangnya sama sekali (Qs = 0)?", ["P = 2", "P = 5", "P = 10", "P = 0"], key="soal10")
+    if st.button("Cek Jawaban Soal 10"):
+        if q10 == "P = 5": st.success("Benar! ✨ Pembahasan: 0 = 2P - 10 -> 2P = 10 -> P = 5
