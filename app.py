@@ -138,4 +138,12 @@ elif menu == "3. Kuis Numerasi Interaktif":
     st.markdown("---")
     q10 = st.radio("10. Jika fungsi penawaran adalah Qs = 2P - 10, pada tingkat harga berapakah produsen mulai enggan menawarkan barangnya sama sekali (Qs = 0)?", ["P = 2", "P = 5", "P = 10", "P = 0"], key="soal10")
     if st.button("Cek Jawaban Soal 10"):
-        if q10 == "P = 5": st.success("Benar! ✨ Pembahasan: 0 = 2P - 10 -> 2P = 10 -> P = 5
+        if q10 == "P = 5": st.success("Benar! ✨ Pembahasan: 0 = 2P - 10 -> 2P = 10 -> P = 5.")
+        else: st.error("Salah. ❌ Set nilai Qs menjadi nol lalu cari nilai P-nya.")
+
+# ==================== MENU 4: PROFIL ====================
+elif menu == "4. Profil Pengembang":
+    st.title("👤 Profil Pengembang")
+    st.write("**Nama:** Marchinia Rakhmi Pradani Putri")
+    st.write("**Program Studi:** Magister Pendidikan Matematika")
+    st.write("**Mata Kuliah:** Teknologi Pembelajaran Digital")
