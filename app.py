@@ -69,13 +69,34 @@ elif menu == "2. Simulator Keseimbangan Pasar":
 # ==================== MENU 3: KUIS ====================
 elif menu == "3. Kuis Numerasi Interaktif":
     st.title("📝 Kuis Evaluasi Mandiri")
+    st.write("Silakan jawab pertanyaan di bawah ini dengan teliti!")
     
-    q1 = st.radio("1. Jika fungsi permintaan masker adalah Qd = 50 - 2P. Jika harga masker (P) adalah 10, berapakah jumlah yang diminta?", ["20", "30", "40", "50"])
+    # ------------------ SOAL 1 ------------------
+    st.markdown("---")
+    q1 = st.radio("1. Jika fungsi permintaan masker adalah Qd = 50 - 2P. Jika harga masker (P) adalah 10, berapakah jumlah yang diminta?", ["20", "30", "40", "50"], key="soal1")
     if st.button("Cek Jawaban Soal 1"):
         if q1 == "30":
-            st.success("Benar! Pembahasan: Qd = 50 - 2(10) = 30.")
+            st.success("Benar! ✨ Pembahasan: Qd = 50 - 2(10) = 50 - 20 = 30.")
         else:
-            st.error("Salah. Coba hitung kembali menggunakan rumus Qd.")
+            st.error("Salah. ❌ Coba hitung kembali menggunakan rumus Qd.")
+
+    # ------------------ SOAL 2 ------------------
+    st.markdown("---")
+    q2 = st.radio("2. Jika fungsi penawaran suatu barang adalah Qs = -20 + 3P. Jika harga barang (P) di pasar adalah 20, berapakah kuantitas yang ditawarkan oleh penjual?", ["20", "30", "40", "50"], key="soal2")
+    if st.button("Cek Jawaban Soal 2"):
+        if q2 == "40":
+            st.success("Benar! ✨ Pembahasan: Qs = -20 + 3(20) = -20 + 60 = 40.")
+        else:
+            st.error("Salah. ❌ Coba hitung kembali menggunakan rumus Qs.")
+
+    # ------------------ SOAL 3 ------------------
+    st.markdown("---")
+    q3 = st.radio("3. Diketahui fungsi permintaan Qd = 100 - 2P dan fungsi penawaran Qs = -20 + 4P. Berapakah harga keseimbangan (P) yang terjadi di pasar?", ["P = 10", "P = 20", "P = 30", "P = 40"], key="soal3")
+    if st.button("Cek Jawaban Soal 3"):
+        if q3 == "P = 20":
+            st.success("Benar! ✨ Pembahasan: Keseimbangan terjadi saat Qd = Qs. Maka 100 - 2P = -20 + 4P -> 120 = 6P -> P = 20.")
+        else:
+            st.error("Salah. ❌ Petunjuk: Cari titik ekuilibrium dengan rumus Qd = Qs.")
 
 # ==================== MENU 4: PROFIL ====================
 elif menu == "4. Profil Pengembang":
